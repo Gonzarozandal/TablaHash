@@ -62,12 +62,7 @@ public class Tabla {
          //El metodo Math.floor(x) sirve para redondear un número decimal hacia abajo al número entero más cercano
          double decimal= numero - Math.floor(numero); 
          //La funcion Math.log10(x)+1 calcula el logaritmo base 10 de "x", y luego se le suma 1 para obtener el número total de dígitos en base 10.
-         int exponente=(int)Math.log10(tamaño)+1;
-         int base=10;
-         //La funcion Math.pow(base, exponente) devuelve un número elevado a una potencia determinada.
-         int multiplicador= (int) Math.pow(base, exponente); 
-         // se obtiene  el numero entero que se colocara en la tabla
-         int entero = (int)(decimal*multiplicador);        
+         int entero= (int)(decimal*tamaño);
          while(tamaño <= entero){
          entero=entero-tamaño;
          } 
